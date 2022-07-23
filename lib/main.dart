@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mercadoaberto/components/campo_pesquisa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -50,48 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         actions: [
-          Container(
-            width: MediaQuery.of(context).size.width - 110,
-            padding: const EdgeInsets.only(top: 10),
-            child: TextField(
-              onSubmitted: (test) => {},
-              decoration: const InputDecoration(
-                isDense: true,
-                contentPadding: EdgeInsets.only(top: 5),
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "Buscar no Mercado Aberto",
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0xffffdb15),
-                    width: 0,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30.0),
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0xffffdb15),
-                    width: 0,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30.0),
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Color(0xffffdb15),
-                    width: 0,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30.0),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          campoPesquisa(),
+          campoPesquisa(),
+          
           Padding(padding: EdgeInsets.all(6)),
           Padding(
             padding: EdgeInsets.only(top: 10),
