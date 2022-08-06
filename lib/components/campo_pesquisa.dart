@@ -6,7 +6,7 @@ class campoPesquisa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: 300,
       padding: const EdgeInsets.only(top: 10),
       child: TextField(
         onSubmitted: (test) => {},

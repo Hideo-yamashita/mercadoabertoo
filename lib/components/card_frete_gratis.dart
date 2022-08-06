@@ -38,7 +38,7 @@ class cardFreteGratis extends StatelessWidget {
             ),
           ),
           Text(
-            " em milhões de produtos a partir de RS79",
+            " em milhões de produtos a partir de R\$79",
             style: TextStyle(
               color: Colors.black,
               fontSize: 12,

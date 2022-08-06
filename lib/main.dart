@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:mercadoaberto/components/campo_pesquisa.dart';
 import 'package:mercadoaberto/components/card_assinatura.dart';
 import 'package:mercadoaberto/components/card_frete_gratis.dart';
+import 'package:mercadoaberto/components/cep_pesquisa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,14 +75,15 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Color(0xffffdb15),
             height: 40.0,
             child: Row(
-              children: const [
+              children: [
                 Padding(padding: EdgeInsets.all(5)),
                 Icon(
                   Icons.pin_drop_outlined,
                   size: 22,
                 ),
                 Padding(padding: EdgeInsets.all(5)),
-                Text("Enviar para"),
+                cepPesquisa(),
+                
               ],
             ),
           ),
@@ -115,11 +118,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const cardAssinatura(
               titulo: "Assine o nivel 6 por R\$ 9,90/mês!",
             ),
-            const cardAssinatura(
-              titulo: "Novo card"
-            ),
             const Padding(padding: EdgeInsets.all(5)),
-            cardFreteGratis(),
+            const cardFreteGratis(),
             const Padding(padding: EdgeInsets.all(10)),
             
           ],
