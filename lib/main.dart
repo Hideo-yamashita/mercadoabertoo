@@ -4,6 +4,8 @@ import 'package:mercadoaberto/components/campo_pesquisa.dart';
 import 'package:mercadoaberto/components/card_assinatura.dart';
 import 'package:mercadoaberto/components/card_frete_gratis.dart';
 import 'package:mercadoaberto/components/cep_pesquisa.dart';
+import 'package:mercadoaberto/api/cep.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +13,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+
 
   // This widget is the root of your application.
   @override
@@ -32,12 +36,24 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
+   
+
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String rua = '';
+/*
+  getInfoCep () async{
+    //final response = await http.get('https://viacep.com.br/ws/$cep/json/');
+    //if(response.statusCode == 200){
+
+    }
+  }
+*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
